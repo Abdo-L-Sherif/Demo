@@ -10,9 +10,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh './list_files.sh'  // Use sh for Unix-like systems (including WSL or Git Bash on Windows)
+                        sh './list.sh'  // Use sh for Unix-like systems (including WSL or Git Bash on Windows)
                     } else {
-                        bat 'bash ./list_files.sh'  // Use bat for running bash scripts on Windows
+                        bat 'bash ./list.sh'  // Use bat for running bash scripts on Windows
                     }
                 }
             }
